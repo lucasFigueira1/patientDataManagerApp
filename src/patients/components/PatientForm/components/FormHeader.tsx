@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import { usePatientsContext } from '@/app/patients/context/PatientsContext'
-import CustomPressable from '@/app/components/CustomPressable'
-import { t } from '@/app/utils/constants'
+import { usePatientsContext } from '@/src/patients/context/PatientsContext'
+import CustomPressable from '@/src/components/CustomPressable'
+import { t } from '@/src/utils/constants'
 
 interface Props {
   handleSubmit: () => void

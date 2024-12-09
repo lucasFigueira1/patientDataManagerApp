@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import { t } from '@/app/utils/constants'
+import { t } from '@/src/utils/constants'
 import AddPacientBtn from './AddPacientBtn'
 
 export default function Header() {

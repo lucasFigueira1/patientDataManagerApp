@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
-import { t } from '@/app/utils/constants';
+import { t } from '@/src/utils/constants';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { Patient } from '@/app/patients/types';
-import IconWithText from '@/app/components/IconWithText';
-import CustomPressable from '@/app/components/CustomPressable';
+import { Patient } from '@/src/patients/types';
+import IconWithText from '@/src/components/IconWithText';
+import CustomPressable from '@/src/components/CustomPressable';
 import { usePatientsContext } from '../../context/PatientsContext';
-import CustomAvatar from '@/app/components/CustomAvatar';
+import CustomAvatar from '@/src/components/CustomAvatar';
 
 interface Props {
   pacient: Patient

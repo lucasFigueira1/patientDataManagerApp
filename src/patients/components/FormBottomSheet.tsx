@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import CustomBottomSheet from '@/app/components/CustomBottomSheet'
+import CustomBottomSheet from '@/src/components/CustomBottomSheet'
 import { usePatientsContext } from '../context/PatientsContext'
 import PatientForm from './PatientForm'
 

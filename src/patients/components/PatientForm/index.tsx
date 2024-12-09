@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React, { useMemo } from 'react'
 import { useForm } from 'react-hook-form'
-import { t } from '@/app/utils/constants'
-import CustomInput from '@/app/components/CustomInput'
+import { t } from '@/src/utils/constants'
+import CustomInput from '@/src/components/CustomInput'
 import { Patient, PatientBsType } from '../../types'
 import FormHeader from './components/FormHeader'
 import { usePatientsContext } from '../../context/PatientsContext'
-import { useToast } from '@/app/ToastProvider'
+import { useToast } from '@/src/ToastProvider'
 import AvatarFormField from './components/AvatarFormField'
 
 interface Props {
@@ -37,7 +37,7 @@ export default function PatientForm({ patientToEdit }: Props) {
     return emptyPatient
   }, [patientToEdit])
 
-  const { control, handleSubmit, clearErrors } = useForm({
+  const { control, handleSubmit, clearErrors, setValue } = useForm({
     defaultValues: initialValues
   })
 
@@ -69,10 +69,17 @@ export default function PatientForm({ patientToEdit }: Props) {
     }
   }
 
+  const onChangeAvatar = (avatarUri: string) => {
+    setValue('avatar', avatarUri)
+  }
+
   return (
     <View style={{ paddingHorizontal: t.ph, gap: 10, paddingBottom: 30 }}>
       <FormHeader handleSubmit={() => handleSubmit(onSubmit)()} />
-      <AvatarFormField avatarUri={patient?.avatar ?? ''} />
+      <AvatarFormField
+        avatarUri={patient?.avatar ?? ''}
+        onChangeAvatar={onChangeAvatar}
+      />
       <CustomInput
         clearErrors={clearErrors}
         name="name"

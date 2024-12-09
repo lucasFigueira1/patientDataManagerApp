@@ -1,7 +1,7 @@
 import { Pressable } from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { t } from '@/app/utils/constants';
+import { t } from '@/src/utils/constants';
 import { usePatientsContext } from '../context/PatientsContext';
 
 

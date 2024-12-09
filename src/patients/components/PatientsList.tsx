@@ -1,8 +1,8 @@
 import { View, Text, FlatList } from 'react-native'
 import React from 'react'
 import { usePatientsContext } from '../context/PatientsContext'
-import { t } from '@/app/utils/constants'
-import PatientCard from '@/app/patients/components/PatientCard'
+import { t } from '@/src/utils/constants'
+import PatientCard from '@/src/patients/components/PatientCard'
 
 export default function PatientsList() {
   const { patients } = usePatientsContext()
