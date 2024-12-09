@@ -1,11 +1,9 @@
-import { View, Text, StyleSheet, Pressable } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
-import { Image } from 'expo-image';
 import { t } from '@/app/utils/constants';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { Patient } from '@/app/patients/types';
 import IconWithText from '@/app/components/IconWithText';
-import ExpandCollapseBtn from './components/ExpandCollapseBtn';
 import CustomPressable from '@/app/components/CustomPressable';
 import { usePatientsContext } from '../../context/PatientsContext';
 import CustomAvatar from '@/app/components/CustomAvatar';
@@ -17,7 +15,7 @@ interface Props {
 export default function PatientCard({ pacient }: Props) {
   const [isExpanded, setIsExpanded] = useState(false)
   const { openEditPatientBs } = usePatientsContext()
-  const { name, avatar, description, website, createdAt, id } = pacient || {}
+  const { name, avatar, description, website } = pacient || {}
 
 
   return (
@@ -62,10 +60,6 @@ export default function PatientCard({ pacient }: Props) {
           >
             {description}
           </Text>
-
-          <ExpandCollapseBtn
-            isExpanded={isExpanded}
-          />
         </CustomPressable>
       </View>
     </View>
