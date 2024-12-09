@@ -110,10 +110,6 @@ export default function PatientForm({ patientToEdit }: Props) {
             value: 10,
             message: 'Description must be at least 10 characters'
           },
-          maxLength: {
-            value: 500,
-            message: 'Description must be at most 500 characters'
-          }
         }}
       />
     </View>

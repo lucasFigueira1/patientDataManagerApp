@@ -24,5 +24,9 @@ Steps to run the project:
 
 ## Architecture
 I've decided to structure the project with clean arquitecture and athomic thinking. 
+Focusing on Separation of Concerns and clean code.
 
 ## demo
+url: https://youtu.be/vJWHMFzoHkY
+
+[![Watch the video](https://img.youtube.com/vi/vJWHMFzoHkY/0.jpg)](https://www.youtube.com/watch?v=vJWHMFzoHkY)
